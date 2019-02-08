@@ -13,7 +13,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect(db.url, {useNewUrlParser: true}).then(() => {
     console.log('DB connected');
 }).catch(err => {
-    console,log('Could not connect to Database. error..', err);
+    console.log('Could not connect to Database. error..', err);
     process.exit();
 })
 
@@ -23,6 +23,6 @@ app.use((err, req, res, next) => {
 })
 
 const PORT= process.env.PORT || 3000
-require('./routes/user')
+require('./routes/user')(app);
 require('./routes/post.js')(app);
 app.listen(PORT, () => console.info(`Server running on ${PORT}`))
