@@ -35,9 +35,10 @@ exports.findOne = (req, res) => {
             });
         })
     } else {
-
+        return res.status(400).send({
+            message: "No post found"
+        })
     }
-    
 }
 
 exports.create = (req, res) => {
