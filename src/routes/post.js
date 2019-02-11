@@ -1,13 +1,13 @@
 module.exports = (app) => {
-    const posts = require('../controllers/post.controller.js');
+    const post = require('../controllers/post.controller.js');
 
-    app.get('/posts', posts.find);
+    app.get('/posts', post.find);
 
-    app.get('/post/:postId', posts.findOne);
+    app.get('/post/:postId', post.findOne);
 
-    app.post('/post', posts.create);
+    app.post('/post', post.create);
 
-    app.put('/post/:postId', posts.update);
+    app.put('/post/:postId', post.update);
 
-    app.delete('/post/:postId', posts.delete);
+    app.delete('/post/:postId', post.delete);
 }
