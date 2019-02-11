@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "18425e27-ae09-40ab-890c-0b722dc3f31f",
+		"name": "RestFullAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "localhost:3000/posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/post/50ab0f8bbcf1bfe2536dc3f8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "author",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "content",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "tags",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "author",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/post/50ab0f8bbcf1bfe2536dc3f8",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"post",
+								"50ab0f8bbcf1bfe2536dc3f8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "author",
+									"value": "machine",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Trump law",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "I'm right, you're wrong we'll build a wall.",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "wall",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/post",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/post/5c5c158cdfa1141d48fe8481",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/post/5c5d865e86c8095f54949bf0",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"post",
+								"5c5d865e86c8095f54949bf0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/post/5c5c1526bd0cc933b8bee25b",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"title\": \"The Laws\",\r\n  \"comment\": {\r\n  \t\"author\": \"Lindo\",\r\n\t\"content\": \":\\\\\",\r\n\t\"email\": \"ashcbdsjh@sbbsdvhjs.com\"\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/post/5c5c1526bd0cc933b8bee25b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"post",
+								"5c5c1526bd0cc933b8bee25b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "localhost:3000/user/55236e5d82bf196454a94ece",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/user/55236e5d82bf196454a94ece",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"55236e5d82bf196454a94ece"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "lddnndinid@ndnjskjsd.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "lammid",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/user/5c6130bd55c61c2ea891cd36",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "qwerty@assddc.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/user/5c6130bd55c61c2ea891cd36",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"5c6130bd55c61c2ea891cd36"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

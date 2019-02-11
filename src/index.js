@@ -23,6 +23,6 @@ app.use((err, req, res, next) => {
 })
 
 const PORT= process.env.PORT || 3000
-require('./routes/user')(app);
+require('./routes/user.js')(app);
 require('./routes/post.js')(app);
 app.listen(PORT, () => console.info(`Server running on ${PORT}`))
