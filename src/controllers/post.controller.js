@@ -116,7 +116,6 @@ exports.update = (req, res) => {
         if (req.body.content) postUpdate.body = req.body.content;
         if (req.body.tags) postUpdate.$push = {tags: req.body.tags};
 
-        console.log(postUpdate);
         post.findOneAndUpdate({
             _id: req.params.postId
         }, postUpdate )
