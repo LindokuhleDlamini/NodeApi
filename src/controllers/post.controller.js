@@ -39,7 +39,7 @@ exports.findOne = (req, res) => {
             message: "No post found"
         })
     }
-}
+};
 
 exports.create = (req, res) => {
     if (req.body) {
@@ -70,7 +70,7 @@ exports.create = (req, res) => {
             message: "No content provided"
         })
     }
-}
+};
 
 exports.delete = (req, res) => {
     if (req.params.postId) {
