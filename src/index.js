@@ -1,10 +1,9 @@
 const express = require('express')
 const app = express()
-const path = require('path')
 const bodyParser = require('body-parser')
 const db = require('./db.js');
 const mongoose = require('mongoose');
-const PORT= process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 mongoose.Promise = global.Promise;
 mongoose.connect(db.url, {useNewUrlParser: true}).then(() => {
@@ -17,11 +16,6 @@ mongoose.connect(db.url, {useNewUrlParser: true}).then(() => {
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.sendFile(path.join(__dirname, '../public/500.html'));
-});
-
 require('./routes/user.js')(app);
 require('./routes/post.js')(app);
 app.listen(PORT, () => console.info(`Server running on ${PORT}`));
