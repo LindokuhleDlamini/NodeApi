@@ -8,7 +8,7 @@ exports.find = (req, res) => {
         res.send(posts);
     }).catch(err => {
         res.status(500).send({
-            message: err.message || "No posts found"
+            message: err.message || 'No posts found'
         });
     });
 };
@@ -20,23 +20,23 @@ exports.findOne = (req, res) => {
         .then(post => {
             if(!post) {
                 return res.status(404).send({
-                    message: "No post for the provided Id" + req.params.postId
+                    message: `No post for the provided Id ${req.params.postId}`
                 });
             }
             res.send(post);
         }).catch(err => {
-            if(err.kind == "ObjectId") {
+            if(err.kind == 'ObjectId') {
                 return res.status(404).send({
-                    message: "No post for the provided Id" + req.params.postId
+                    message: `No post for the provided Id' ${req.params.postId}`
                 })
             }
             return res.status(500).send({
-                message: err.message || "Post not found"
+                message: err.message || 'Post not found'
             });
         })
     } else {
         return res.status(400).send({
-            message: "Post not found"
+            message: 'Post not found'
         })
     }
 };
@@ -56,18 +56,18 @@ exports.create = (req, res) => {
             console.log(data)
             return res.send(data);
         }).catch(err => {
-            if(err.kind == "ObjectId") {
+            if(err.kind == 'ObjectId') {
                 return res.status(404, {
-                    message: err.message || "Post couldn't be added" 
+                    message: err.message || 'Post could not be added' 
                 }).send()
             }
             res.status(500).send({
-                message: "Post creation failed"
+                message: 'Post creation failed'
             })
          })
     } else {
         return res.status(400).send({
-            message: "No content provided"
+            message: 'No content provided'
         })
     }
 };
@@ -78,24 +78,24 @@ exports.delete = (req, res) => {
         .then(post => {
             if (!post) {
                 return res.status(400).send({
-                    message: "No post for the provided Id"
+                    message: 'No post for the provided Id'
                 })
             } else {
-                return res.send("post with Id "+ req.params.postId + "has been deleted")
+                return res.send(`post with Id ${req.params.postId} has been deleted`)
             }
         }).catch(err => {
-            if(err.kind == "ObjectId") {
+            if(err.kind == 'ObjectId') {
                 return res.status(404).send({
-                    message: "No post for the provided Id" + req.params.postId
+                    message: `No post for the provided Id ${req.params.postId}`
                 })
             }
             return res.status(500).send({
-                message: err.message || "Error deletion failed"
+                message: err.message || 'Error deletion failed'
             })
         })
     } else {
         return res.status(400).send({
-            message: "No post Id provided"
+            message: 'No post Id provided'
         })
     }
 };
@@ -122,24 +122,24 @@ exports.update = (req, res) => {
         .then((post) => {
             if (!post) {
                 return res.status(400).send({
-                    message: "No post for the provided Id"
+                    message: 'No post for the provided Id'
                 })
             } else{
                 return res.send(post)
             }
         }).catch(err => {
-            if(err.kind == "ObjectId") {
+            if(err.kind == 'ObjectId') {
                 return res.status(404).send({
-                    message: "No post for the provided Id catch" + req.params.postId
+                    message: `No post for the provided Id catch ${req.params.postId}`
                 })
             }
             res.status(500).send({
-                message: err.message || "Error update failed"
+                message: err.message || 'Error update failed'
             })
         })
     } else {
         return res.status(400).send({
-            message: "No post Id provided"
+            message: 'No post Id provided'
         })
     }
 };

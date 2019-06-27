@@ -13,10 +13,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "localhost:3000/posts",
 							"host": [
@@ -31,7 +27,7 @@
 					"response": []
 				},
 				{
-					"name": "localhost:3000/post/50ab0f8bbcf1bfe2536dc3f8",
+					"name": "localhost:3000/post/{postId}",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -87,14 +83,14 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:3000/post/50ab0f8bbcf1bfe2536dc3f8",
+							"raw": "localhost:3000/post/5d14ca7543e03e15483f92e7",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"post",
-								"50ab0f8bbcf1bfe2536dc3f8"
+								"5d14ca7543e03e15483f92e7"
 							]
 						}
 					},
@@ -150,38 +146,34 @@
 					"response": []
 				},
 				{
-					"name": "localhost:3000/post/5c5c158cdfa1141d48fe8481",
+					"name": "localhost:3000/post/{postId}",
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
-							"raw": "localhost:3000/post/5c5d865e86c8095f54949bf0",
+							"raw": "localhost:5000/post/5d14ca7543e03e15483f92e7",
 							"host": [
 								"localhost"
 							],
-							"port": "3000",
+							"port": "5000",
 							"path": [
 								"post",
-								"5c5d865e86c8095f54949bf0"
+								"5d14ca7543e03e15483f92e7"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "localhost:3000/post/5c5c1526bd0cc933b8bee25b",
+					"name": "localhost:3000/post/{postId}",
 					"request": {
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"value": "application/json"
 							}
 						],
 						"body": {
@@ -208,14 +200,10 @@
 			"name": "User",
 			"item": [
 				{
-					"name": "localhost:3000/user/55236e5d82bf196454a94ece",
+					"name": "localhost:3000/user/{userId}",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "localhost:3000/user/55236e5d82bf196454a94ece",
 							"host": [
@@ -271,15 +259,15 @@
 					"response": []
 				},
 				{
-					"name": "localhost:3000/user/5c6130bd55c61c2ea891cd36",
+					"name": "localhost:3000/user/{userId}",
 					"request": {
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"value": "application/x-www-form-urlencoded",
-								"type": "text"
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
 							}
 						],
 						"body": {
