@@ -104,7 +104,7 @@ exports.update = (req, res) => {
     if (req.params.postId) {
         const postUpdate = {};
         const commentObj = {};
-        if(req.body.comment.author || req.body.comment.content)
+        if(req.body.comment)
         {
             if (req.body.comment.author) commentObj.author = req.body.comment.author;
             if (req.body.comment.content) commentObj.body = req.body.comment.content;
